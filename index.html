@@ -18,16 +18,50 @@
             font-size: 16px;
             cursor: pointer;
         }
+        /* 沒有設定彩虹色的按鈕不顯示；因此只顯示前 7 顆按鈕。 */
+        button:not([data-rainbow-color]) {
+            display: none;
+        }
+        /* 七色彩虹各使用一次，不重複。 */
+        button[data-rainbow-color="紅"] {
+            background-color: red;
+            color: white;
+        }
+        button[data-rainbow-color="橙"] {
+            background-color: orange;
+            color: white;
+        }
+        button[data-rainbow-color="黃"] {
+            background-color: yellow;
+            color: black;
+        }
+        button[data-rainbow-color="綠"] {
+            background-color: green;
+            color: white;
+        }
+        button[data-rainbow-color="藍"] {
+            background-color: blue;
+            color: white;
+        }
+        button[data-rainbow-color="靛"] {
+            background-color: indigo;
+            color: white;
+        }
+        button[data-rainbow-color="紫"] {
+            background-color: violet;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <button>按鈕1</button>
-    <button>按鈕2</button>
-    <button>按鈕3</button>
-    <button>按鈕4</button>
-    <button>按鈕5</button>
-    <button>按鈕6</button>
-    <button>按鈕7</button>
+    <button data-rainbow-color="紅">按鈕1</button>
+    <button data-rainbow-color="橙">按鈕2</button>
+    <button data-rainbow-color="黃">按鈕3</button>
+    <button data-rainbow-color="綠">按鈕4</button>
+    <button data-rainbow-color="藍">按鈕5</button>
+    <button data-rainbow-color="靛">按鈕6</button>
+    <button data-rainbow-color="紫">按鈕7</button>
     <button>按鈕8</button>
+    <button>按鈕9</button>
 </body>
 </html>
